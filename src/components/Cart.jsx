@@ -37,6 +37,7 @@ const Cart = ({ show, handleClose }) => {
     if (product.quantity === stockProduct) {
       message.error("You cannot add more products");
     } else {
+      message.success("Quantity increased");
       dispatch(
         updateProduct({
           id: product.id,
@@ -49,6 +50,7 @@ const Cart = ({ show, handleClose }) => {
     if (product.quantity <= 1) {
       dispatch(deleteProduct(product.id));
     } else {
+      message.success("Quantity decreased");
       dispatch(
         updateProduct({
           id: product.id,

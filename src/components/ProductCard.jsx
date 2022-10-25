@@ -11,21 +11,19 @@ const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
 
   const plus = () => {
-    if (quantity + 1 > product.stock) {
-      setTimeout(() => {
-        message.error("no hay más productos");
-      }, 1000);
-    }
+    message.success("Quantity increased");
     setQuantity(quantity + 1);
   };
 
   const minus = () => {
     if (quantity - 1 <= 0) {
       setTimeout(() => {
-        message.warning("La cantidad mínima es 1");
+        message.warning("The minimum quantity is 1");
       }, 1000);
+    } else {
+      message.success("Quantity decreased");
+      setQuantity(quantity - 1);
     }
-    setQuantity(quantity - 1);
   };
 
   const addToCart = () => {
@@ -35,11 +33,11 @@ const ProductCard = ({ product }) => {
 
     if (quantity === 1) {
       setTimeout(() => {
-        message.success(`Adding ${quantity} product`);
+        message.success(`Adding ${quantity} product to cart`);
       }, 100);
     } else {
       setTimeout(() => {
-        message.success(`Adding ${quantity} products`);
+        message.success(`Adding ${quantity} products to cart`);
       }, 100);
     }
 
@@ -132,10 +130,12 @@ const ProductCard = ({ product }) => {
           ></i>
           <Button
             style={{
+              height: "70%",
               background: "#333",
               color: "white",
               border: "none",
               borderBottom: "3px solid #e61a6e",
+              cursor: "auto",
             }}
           >
             {quantity}
