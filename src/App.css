@@ -107,3 +107,14 @@ img{
     width: 20rem;
   }
 }
+@media screen and (min-width: 800px) and (max-width: 1280px) {
+  .shoppingman{
+    display: none;
+  }
+  .carritonavbar{
+    display: flex;
+  }
+  .productcard{
+    width: 25rem;
+  }
+}
