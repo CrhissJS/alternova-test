@@ -125,7 +125,7 @@ const ProductCard = ({ product }) => {
         <Container style={{ display: "flex", justifyContent: "center" }}>
           <i
             onClick={() => minusFunction()}
-            style={{ fontSize: "30px", color: "lightgreen" }}
+            style={{ fontSize: "30px", color: "lightgreen", marginTop: "5px" }}
             className="fa-regular fa-square-minus minussquare"
           ></i>
           <Button
@@ -134,7 +134,7 @@ const ProductCard = ({ product }) => {
               background: "#333",
               color: "white",
               border: "none",
-              borderBottom: "3px solid #e61a6e",
+              borderBottom: "2px solid #e61a6e",
               cursor: "auto",
             }}
           >
@@ -147,7 +147,7 @@ const ProductCard = ({ product }) => {
                 ? () => message.error("No more products in stock")
                 : plus
             }
-            style={{ fontSize: "30px", color: "lightgreen" }}
+            style={{ fontSize: "30px", color: "lightgreen", marginTop: "5px" }}
             className="fa-regular fa-square-plus plussign"
           ></i>
         </Container>
