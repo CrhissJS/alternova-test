@@ -1,0 +1,109 @@
+.App {
+  text-align: center;
+  background: #333;
+}
+
+img{
+  height: 200px;
+  object-fit: contain;
+}
+
+.neon{
+  text-shadow: 0 0 30px #e61a6e, 0 0 5px #e61a6e;
+}
+
+.cardproducts{-webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, inset -50px -50px 0px -30px rgba(0,0,0,0); 
+  box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, inset -50px -50px 0px -30px rgba(0,0,0,0);
+}
+
+.agregarproducto:hover{
+  animation: sacudir 500ms ease 1;
+  border-bottom: 1px solid lightgreen;
+}
+
+.minussquare:hover,
+.plussign:hover{
+  cursor: pointer;
+  animation: sacudir 300ms ease 1;
+}
+
+.button-hovered:hover{
+  animation: sacudir 300ms ease 1;
+}
+
+.sacudir{
+  animation: sacudir 300ms ease 1;
+}
+
+.carrito:hover{
+  animation: sacudir 300ms ease 1;
+}
+
+.trash:hover{
+  animation: sacudir 300ms ease 1;
+}
+
+.alternovalogo{
+  animation: flotar 5s ease-in 1;
+  
+  animation-iteration-count: infinite;
+}
+
+.shoppingman{
+  margin-left: 100px;
+  animation: mover2 30s ease-in-out 1;
+  animation-iteration-count: infinite;
+}
+@keyframes flotar {
+  30% {
+    transform: translateY(10%);
+}
+100% {
+    transform: translateY(0);
+}
+}
+
+@keyframes mover {
+
+70% {
+    transform: translateX(20%);
+}
+}
+
+@keyframes mover2 {
+100% {
+    transform: translateX(900%);
+}
+  }
+
+@keyframes sacudir {
+  30% {
+      transform: translateX(10%);
+  }
+
+  65% {
+      transform: translateX(-10%);
+  }
+
+  100% {
+      transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 800px) {
+  .alternovalogo{
+   animation: none;
+  }
+  .shoppingman{
+    display: none;
+  }
+  .carritonavbar{
+    display: flex;
+  }
+  .carrito{
+    margin-right: 50px;
+  }
+  .productcard{
+    width: 20rem;
+  }
+}
